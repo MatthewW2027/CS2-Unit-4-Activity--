@@ -24,6 +24,23 @@ public class Main {
          // Increment line counter 
          i++;
       }
+
+      System.out.println("DONE READING THE FILE!"); 
+      // CALL OUR METHOD!
+      randomPokemon(pokemonLines.length, pokemonLines); 
       
    }
-}
+
+   // Method to print out a random Pokemon name 
+   public static void randomPokemon(int length, String[] pokemonLines) {
+      // 1. Generate raondom into from 1 to array length 
+      int randIndex = (int)(Math.random() * (length-1) + 1); 
+      System.out.println(randIndex); 
+
+      // 2. Get pokemon at that index 
+      String randPokeLine = pokemonLines[randIndex]; 
+      System.out.println(randPokeLine); 
+
+   }
+
+}// END CLASS 
